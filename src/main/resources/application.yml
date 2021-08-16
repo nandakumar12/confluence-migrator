@@ -1,0 +1,50 @@
+server:
+  port: 8000
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      event:
+        merge:
+          entity_copy_observer: allow
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/conf_migration
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: admin
+    password: 12345
+    hikari:
+      minimum-idle: 1
+      pool-name: confluence-db
+      connection-timeout: 30000
+      maximum-pool-size: 50
+      idle-timeout: 10000
+      connection-test-query: SELECT 1 FROM DUAL
+
+confluence:
+  slugs:
+    confluence-total-page: /confluence/rest/api/search?cql=space=%s
+    confluence-space-slug: /confluence/rest/api/space/
+    confluence-content-export-slug: /confluence/rest/api/content/%s?expand=body.export_view
+    confluence-attachment-slug: /confluence/rest/api/content/%s?expand=children.attachment
+    confluence-content-slug: /confluence/rest/api/space/%s/content
+    confluence-hierarchy-slug: /confluence/rest/api/space/%s/content?depth=all&expand=ancestors
+    confluence-metadeta-slug: /confluence/rest/api/content
+    confluence-child-page-slug: /confluence/rest/api/content/%s/child/page?limit=1000
+  token: <YOUR API TOKEN/PASSWORD>
+  email: <YOUR CONFLUENCE USERNAME>
+  domain: <CONFLUENCE DOMAIN>
+gDrive:
+  sharedDriveId: <SHARED DRIVE/FOLDER ID>

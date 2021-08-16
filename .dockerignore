@@ -1,0 +1,21 @@
+# keep these
+!files/
+!files/attachments
+!files/html
+!mds/
+
+# ignore these
+
+Dockerfile
+.gitignore
+**/*.iml
+.idea/
+db-data/
+htmls/**
+files/attachments/**
+files/html/**
+mds/**
+page_data.tmp/
+target/
+tokens/
+

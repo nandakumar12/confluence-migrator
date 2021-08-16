@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "1f7556b7-5366-45e4-b81f-21766771d921",
+		"name": "confluence migrator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/process?spaceKey=CTGM&uploadGdrive=false",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/process?spaceKey=CTGM&uploadGdrive=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"process"
+					],
+					"query": [
+						{
+							"key": "spaceKey",
+							"value": "CTGM"
+						},
+						{
+							"key": "uploadGdrive",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/process/page/CTGM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/process/page/CTGM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"process",
+						"page",
+						"CTGM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/create/gdrive/hierarchy/CTGM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/create/gdrive/hierarchy/CTGM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create",
+						"gdrive",
+						"hierarchy",
+						"CTGM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/async/start/job/CTGM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/async/start/job/CTGM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"async",
+						"start",
+						"job",
+						"CTGM"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
